@@ -1,12 +1,12 @@
 import React from 'react'
-// import {url} from './Url.js';
+import url from '../config/Url.js';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 function Products() {
     // const url = "localhost:5000";
     const [products, setProducts] = useState([]);
 
-    const url = "http://localhost:5000";
+    // const url = "http://localhost:5000";
 
     useEffect(() => {
 
