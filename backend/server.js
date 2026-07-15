@@ -1,11 +1,13 @@
 import express from 'express';
 import ProductsRouter from './Routers/ProductsRouter.js';
 import connectDB from './DB/db.js';
+import cors from 'cors';
+
 
 const app = express();
 connectDB();
+app.use(cors());
 app.use(express.json());
-
 app.use('/api' , ProductsRouter);
 
 app.get('/' , (req , res)=>{
