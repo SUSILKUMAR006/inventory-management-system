@@ -3,17 +3,16 @@ import React from 'react'
 function Billing() {
   return (
     <div className='mx-10 bg-white shadow-md px-10 py-3 rounded-md'>
-      <div>
+      {/* <div>
         <h1 className='text-xl'>Billing Informations</h1>
-      </div>
+      </div> */}
 
-      <div className='my-10'>
+      {/* <div className='my-10'>
         <table className='w-full mt-5 border-2 border-gray-300 '>
           <thead className='bg-gray-200 border-2 border-gray-300'>
             <tr className=''>
               <th className='border-2 border-gray-300 px-4 py-2'>S No</th>
               <th className='border-2 border-gray-300 px-4 py-2'>Customer Name</th>
-              {/* <th className='border-2 border-gray-300 px-4 py-2'>Product Name</th> */}
               <th className='border-2 border-gray-300 px-4 py-2'>Phone No</th>
               <th className='border-2 border-gray-300 px-4 py-2'>Billing No</th>
               <th className='border-2 border-gray-300 px-4 py-2'>Date</th>
@@ -136,6 +135,32 @@ function Billing() {
 
             </tbody>
         </table>
+      </div> */}
+
+      <div>
+        <h1 className='text-2xl font-semibold mb-4'>Create Billing</h1>
+        <div className="grid grid-cols-2 gap-4">
+          <div className='flex flex-col gap-2 '>
+              <h1 className='text-xl font-medium text-blue-800'>Customer Information</h1>
+              <div className='flex justify-between gap-2'>
+              <input type="text" placeholder='Customer phone' className=' w-[80%] border border-gray-400 px-4 py-2 rounded-md shadow-md'/>
+              <button className='border px-4 py-2 rounded-md bg-blue-800 shadow-md text-white w-[20%]'>Search</button>
+              </div>
+              <div className="border border-gray-400 p-6">
+                <div className='flex justify-center items-center gap-2 p-4 w-30 h-30 bg-green-200  rounded-full'>
+                  <h1 className='text-5xl  font-bold rounded-full '>SK</h1>
+                </div>
+              </div>
+          </div>
+
+          <div>
+            <h1 className='text-xl font-medium text-blue-800'>Billing Information</h1>
+            <div className='flex flex-col gap-2'>
+              <input type="text" placeholder='Billing No' className='border border-gray-400 px-4 py-2 rounded-md shadow-md'/> 
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   )
