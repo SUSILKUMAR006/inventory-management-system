@@ -253,11 +253,92 @@ function Billing() {
               <div>
                 <div className='text-2xl font-bold text-blue-800'>MyBill<span className='text-orange-400'>Book</span></div>
               </div>
-              <div>
+              <div className=' mt-10'>
                 <div className="flex justify-end items-center gap-3">
                   <span className=' border-2 border-orange-500 w-10 h-0'></span><h1 className='text-3xl font-bold  text-blue-800'>INVOICE</h1><span className=' border-2 border-orange-500 w-10 h-0'></span>
                 </div>
               </div>
+              <div className="my-5">
+                <h1 className='text-xl font-semibold '>Invoice To</h1>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className='p-2 '>
+                    <p className='font-semibold'>John Doe</p>
+                    <p className='text-gray-700'>123 Main St, Anytown, USA</p>
+                    <p className='text-gray-700'>john.doe@example.com</p>
+                    <p className='text-gray-700'><span>Phone: </span> 901-234-5678</p>
+                  </div>
+                  <div className='p-2 flex flex-col gap-2 items-end'>
+                    <p>Invoice No : <span>INV-001</span></p>
+                    <p>Invoice Date : <span>2023-01-01</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="my-5">
+                <table className='w-full mt-5'>
+                  <thead className='bg-blue-900 border-2 text-white'>
+                    <tr className=' ' >
+                      <th className='border-2 border-gray-300 p-2'>#</th>
+                      <th className='border-2 border-gray-300 p-2'>Product Name</th>
+                      <th className='border-2 border-gray-300 p-2'>Price</th>
+                      <th className='border-2 border-gray-300 p-2'>Qty</th>
+                      <th className='border-2 border-gray-300 p-2'>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className='text-center'>
+                      <td className='border-2 border-gray-300 p-2'>1</td>
+                      <td className='border-2 border-gray-300 p-2'>Apple Mac Book</td>
+                      <td className='border-2 border-gray-300 p-2'>$1,299.99</td>
+                      <td className='border-2 border-gray-300 p-2'>1</td>
+                      <td className='border-2 border-gray-300 p-2'>$1,299.99</td>
+                    </tr>
+                    <tr className='text-center'>
+                      <td className='border-2 border-gray-300 p-2'>2</td>
+                      <td className='border-2 border-gray-300 p-2'>Samsung Galaxy Tab</td>
+                      <td className='border-2 border-gray-300 p-2'>$1,299.99</td>
+                      <td className='border-2 border-gray-300 p-2'>1</td>
+                      <td className='border-2 border-gray-300 p-2'>$1,299.99</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="mt-5">
+                <div className='grid grid-cols-2 gap-2'>
+                  {/* template use this  */}
+                  <div>
+                  </div>
+                  <div className='flex flex-col gap-2 mt-10  '>
+                    <div className='flex justify-between items-center gap-5'>
+                      <p>Subtotal:</p>
+                      <p> $2,599.98</p>
+                    </div>
+                    <div className='flex justify-between items-center gap-5'>
+                      <p>Discount:</p>
+                      <p> $10.00</p>
+                    </div>
+                    <div className='flex justify-between items-center gap-5'>
+                      <p>Taxable Amount:</p>
+                      <p> $259.99</p>
+                    </div>
+                    <div className='flex justify-between items-center gap-5'>
+                      <p>CGST (9%):</p>
+                      <p> $25.99</p>
+                    </div>
+                    <div className='flex justify-between items-center gap-5'>
+                      <p>SGST (9%):</p>
+                      <p> $25.99</p>
+                    </div>
+                    <div className='flex font-bold w-full justify-between items-center gap-5 bg-amber-400 p-2'>
+                      <p>Grand Total</p>
+                      <p> $2,599.98</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h1 className='text-center text-gray-900 mt-10'>Thank you for your business!</h1>
             </div>
           </div>
         </div>
