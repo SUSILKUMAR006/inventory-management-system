@@ -139,24 +139,125 @@ function Billing() {
 
       <div>
         <h1 className='text-2xl font-semibold mb-4'>Create Billing</h1>
-        <div className="grid grid-cols-2 gap-4">
-          <div className='flex flex-col gap-2 '>
-              <h1 className='text-xl font-medium text-blue-800'>Customer Information</h1>
-              <div className='flex justify-between gap-2'>
-              <input type="text" placeholder='Customer phone' className=' w-[80%] border border-gray-400 px-4 py-2 rounded-md shadow-md'/>
+        <div className="grid grid-cols-2 gap-5">
+          <div className='flex flex-col gap-2 border border-gray-400 px-4 py-2 rounded-md shadow-md'>
+            <h1 className='text-xl font-medium text-blue-800 my-2'>Customer Information</h1>
+            <div className='flex justify-between gap-2'>
+              <input type="text" placeholder='Customer phone' className=' w-[80%] border border-gray-400 px-4 py-2 rounded-md shadow-md' />
               <button className='border px-4 py-2 rounded-md bg-blue-800 shadow-md text-white w-[20%]'>Search</button>
-              </div>
-              <div className="border border-gray-400 p-6">
+            </div>
+            <div>
+              <div className="border border-gray-400 p-6 bg-green-100 rounded-md shadow-md flex justify-between items-center mt-5">
                 <div className='flex justify-center items-center gap-2 p-4 w-30 h-30 bg-green-200  rounded-full'>
                   <h1 className='text-5xl  font-bold rounded-full '>SK</h1>
                 </div>
-              </div>
-          </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <h1 className='text-xl font-semibold text-blue-800 col-span-2'>Customer Details</h1>
+                  <p className='font-semibold'>Name:</p>
+                  <p>John Doe</p>
+                  <p className='font-semibold'>Email:</p>
+                  <p>john.doe@example.com</p>
+                  <p className='font-semibold'>Phone:</p>
+                  <p>123-456-7890</p>
 
-          <div>
-            <h1 className='text-xl font-medium text-blue-800'>Billing Information</h1>
-            <div className='flex flex-col gap-2'>
-              <input type="text" placeholder='Billing No' className='border border-gray-400 px-4 py-2 rounded-md shadow-md'/> 
+                </div>
+              </div>
+              <div>
+                <button className='border px-4 py-2 rounded-md text-green-700 hover:bg-green-700 mt-3 cursor-pointer   shadow-md hover:text-white '>+ Add Customer</button>
+              </div>
+
+
+              <div className="mt-10">
+                <h1 className='text-xl font-medium text-blue-800 my-2'>Add Product</h1>
+
+                <div className='flex justify-between gap-2'>
+                  <input type="text" placeholder='Product Name' className='border border-gray-400 px-4 py-2 rounded-md shadow-md w-[80%]' />
+                  <button className='border px-4 py-2 rounded-md bg-blue-800 shadow-md text-white w-[20%] '>Add</button>
+                </div>
+
+                <div>
+                  <table className='w-full mt-5 border-2 border-gray-300 '>
+                    <thead className=''>
+                      <tr className=''>
+                        <th className='border-2 border-gray-300 px-4 py-2'>Product Name</th>
+                        <th className='border-2 border-gray-300 px-4 py-2'>Price</th>
+                        <th className='border-2 border-gray-300 px-4 py-2'>Qty</th>
+                        <th className='border-2 border-gray-300 px-4 py-2'>Discount</th>
+                        <th className='border-2 border-gray-300 px-4 py-2'>Total</th>
+                        <th className='border-2 border-gray-300 px-4 py-2'>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className='border-2 border-gray-300 px-4 py-2'>Apple Mac Book</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>$1,299.99</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>1</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>10%</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>$1,169.99</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>
+                          <button className='bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600'>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='border-2 border-gray-300 px-4 py-2'>Apple Mac Book</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>$1,299.99</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>1</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>10%</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>$1,169.99</td>
+                        <td className='border-2 border-gray-300 px-4 py-2'>
+                          <button className='bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600'>Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <button className='border px-3 py-1 rounded-md text-red-700 hover:bg-red-700 mt-5 cursor-pointer   shadow-md hover:text-white '>Clear All</button>
+                </div>
+
+                <div className='flex justify-center gap-5 items-center mt-5 '>
+                  <div className=' w-[50%]'>
+                    <p>Payment Method</p>
+                    <select className='border border-gray-400 px-4 py-2 rounded-md shadow-md m-1 w-full'>
+                      <option value="cash">Cash</option>
+                      <option value="credit_card">Credit Card</option>
+                      <option value="debit_card">Debit Card</option>
+                      <option value="paypal">PayPal</option>
+                    </select>
+                  </div>
+                  <div className=' w-[50%]'>
+                    <p>Sales Person</p>
+                    <select className='border border-gray-400 px-4 py-2 rounded-md shadow-md mt-1 w-full'>
+                      <option value="john_doe">John Doe</option>
+                      <option value="jane_smith">Jane Smith</option>
+                      <option value="michael_johnson">Michael Johnson</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+              <div className='flex justify-end gap-2 mt-5'>
+                <div className=' flex items-center'>
+                  <button className='bg-green-500 text-white  px-4 py-2 shadow rounded-md hover:bg-green-600'>Save Invoice</button>
+                </div>
+                <div className=' flex items-center'>
+                  <button className='bg-blue-500 text-white  px-4 py-2 shadow rounded-md hover:bg-blue-600'>Print Invoice</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className="flex flex-col gap-5 border border-gray-400 bg-gray-100 px-4 py-2 rounded-md shadow-md" >
+            <h1 className='text-xl font-medium text-blue-800'>Invoice Preview</h1>
+            <div className="border border-gray-400 p-6 shadow-md rounded-md bg-white ">
+              <div>
+                <div className='text-2xl font-bold text-blue-800'>MyBill<span className='text-orange-400'>Book</span></div>
+              </div>
+              <div>
+                <div className="flex justify-end items-center gap-3">
+                  <span className=' border-2 border-orange-500 w-10 h-0'></span><h1 className='text-3xl font-bold  text-blue-800'>INVOICE</h1><span className=' border-2 border-orange-500 w-10 h-0'></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
